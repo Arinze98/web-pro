@@ -1,0 +1,665 @@
+@font-face {
+  font-family: primary_font;
+  src: url(/fonts/arial.ttf);
+}
+@font-face {
+  font-family: primary2_font;
+  src: url(/fonts/arialbd.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  width: 100dvw;
+  min-height: 100dvh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: rgb(241, 241, 241);
+}
+.body header {
+  width: 100dvw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 1rem;
+  background-color: white;
+  z-index: 2;
+  overflow: hidden;
+}
+.body header .logo_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.body header .logo_btn .logo img {
+  width: 2rem;
+  height: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.body header .logo_btn .icon .fa-bars {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.body header nav {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-top: 1rem;
+  display: none;
+  transition: all 0.5s;
+}
+.body header nav ul {
+  list-style-type: none;
+  display: grid;
+  gap: 0.2rem;
+}
+.body header nav ul li {
+  height: 5dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(241, 241, 241);
+  border: 1px solid sandybrown;
+  border-radius: 0.8rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.body header nav ul li a {
+  text-decoration: none;
+  color: sandybrown;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  color: black;
+}
+.body header nav ul li:hover {
+  color: white;
+  background-color: rgb(216, 178, 145);
+}
+.body header .nav_show {
+  display: block;
+}
+.body .header_fixed {
+  position: fixed;
+}
+.body h1 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: secondary_font;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  font-family: primary2_font;
+  text-align: center;
+  color: black;
+}
+.body h1 span {
+  color: sandybrown;
+}
+.body .content_container {
+  width: 90vw;
+  margin: 2rem auto;
+  max-width: 1170px;
+}
+.body .content_container .content_image img {
+  max-width: 100%;
+}
+.body .content_container .content {
+  margin-top: 2rem;
+}
+.body .content_container .content h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: secondary_font;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  color: rgb(65, 149, 177);
+  font-family: primary2_font;
+}
+.body .content_container .content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: sans-serif;
+  line-height: 1.2em;
+  letter-spacing: 0.2em;
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+}
+.body .content_container .content p {
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  color: rgb(62, 103, 117);
+}
+.body .content_container .content .countdown {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-start;
+  line-height: 2em;
+}
+.body .content_container .content .countdown .dead-line {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgb(26, 26, 89);
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: primary2_font;
+}
+.body .content_container .content .countdown .dead-line h4 {
+  font-size: 1.5rem;
+}
+
+.page {
+  width: 100dvw;
+  min-height: 100dvh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.page h1 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: secondary_font;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  font-family: primary2_font;
+  text-align: center;
+  color: black;
+}
+.page h1 span {
+  color: sandybrown;
+}
+
+footer {
+  width: 100dvw;
+  height: 15dvh;
+  background-color: black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+footer p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+.to_top {
+  position: fixed;
+  top: 90%;
+  left: 83%;
+  visibility: hidden;
+  -webkit-animation: bounce 2s ease-in-out infinite;
+          animation: bounce 2s ease-in-out infinite;
+}
+.to_top a button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: sandybrown;
+  color: white;
+  font-size: 1rem;
+  bottom: 100%;
+  left: 80%;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.show_to_top {
+  visibility: visible;
+}
+
+.about .article_container {
+  width: 90vw;
+  margin: 2rem auto;
+  max-width: 1170px;
+}
+.about .article_container .image img {
+  width: 100%;
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.about .article_container .about1 {
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: rgb(241, 241, 241);
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.about .article_container .about1 .button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.1rem;
+}
+.about .article_container .about1 .button_container button {
+  width: 32vw;
+  height: 5vh;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: secondary_font;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  background-color: sandybrown;
+}
+.about .article_container .about1 .button_container button:hover {
+  background-color: rgb(216, 178, 145);
+}
+.about .article_container .about1 .button_container .active {
+  background-color: rgb(241, 241, 241);
+}
+.about .article_container .about1 .about_container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.about .article_container .about1 .about_container .content {
+  padding: 1.5rem;
+  display: none;
+}
+.about .article_container .about1 .about_container .content h1 {
+  text-align: start;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: secondary_font;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.about .article_container .about1 .about_container .content p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+}
+.about .article_container .about1 .about_container .active {
+  display: block;
+}
+
+.service {
+  background-color: rgb(241, 241, 241);
+  padding-bottom: 3rem;
+}
+.service .service_btn {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+.service .service_btn .s_btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  border: 1px solid sandybrown;
+  border-radius: 0.8rem;
+  color: sandybrown;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow: hidden;
+  background: none;
+  transition: all 0.5s ease-in-out;
+}
+.service .service_btn .s_btn:hover {
+  color: white;
+  background-color: rgb(216, 178, 145);
+}
+.service .service_container {
+  width: 80vw;
+  margin: 3rem auto;
+  display: grid;
+  gap: 3rem;
+}
+.service .service_container .container .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 170px;
+  border: 3px solid sandybrown;
+  border-radius: 0.8rem;
+}
+.service .service_container .container .content {
+  margin-top: 0.5rem;
+}
+.service .service_container .container .content .name_price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(115, 115, 115);
+}
+.service .service_container .container .content .name_price h1 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: secondary_font;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  font-family: primary2_font;
+  letter-spacing: 0.2em;
+  line-height: 1.4em;
+}
+.service .service_container .container .content .name_price .price {
+  color: sandybrown;
+}
+.service .service_container .container .content p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  margin-top: 1rem;
+}
+
+.contact {
+  background-color: white;
+}
+.contact .slider-container {
+  width: 90vw;
+  margin: 0 auto;
+  height: 40vh;
+  max-width: 80rem;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 4rem;
+}
+.contact .slider-container .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease-in-out;
+  text-align: center;
+}
+.contact .slider-container .slide img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contact .slider_btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+.contact .slider_btn button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background-color: sandybrown;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.contact .slider_btn button:hover {
+  transform: scale(1.2);
+}
+
+@media (min-width: 768px) {
+  .body h1 {
+    font-size: 1.5rem;
+  }
+  .body header {
+    padding: 0 2rem;
+  }
+  .body header .logo_btn .logo img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .body header .logo_btn .icon .fa-bars {
+    font-size: 2rem;
+  }
+  .body header nav ul li a {
+    font-size: 0.9rem;
+  }
+  .body .content_container .content h3 {
+    font-size: 1.8rem;
+  }
+  .body .content_container .content h4 {
+    font-size: 1.2rem;
+  }
+  .body .content_container .content p {
+    font-size: 1.1rem;
+  }
+  .body .content_container .content .countdown .dead-line {
+    width: 7rem;
+    height: 7rem;
+    font-size: 1.2rem;
+  }
+  .body .content_container .content .countdown .dead-line h4 {
+    font-size: 1.7rem;
+  }
+  .page {
+    min-height: 100vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .page h1 {
+    font-size: 1.5rem;
+  }
+  .about .article_container .about1 .about_container .content p {
+    font-size: 1.1rem;
+  }
+  .service .service_btn {
+    justify-content: space-evenly;
+  }
+  .service .service_btn .s_btn {
+    font-size: 1.1rem;
+  }
+  .service .service_container .container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  .service .service_container .container .content {
+    margin: 0;
+    display: grid;
+  }
+  .service .service_container .container .content .name_price h1 {
+    font-size: 1.1rem;
+  }
+  .service .service_container .container .content p {
+    font-size: 0.9rem;
+  }
+  .contact .slider-container {
+    height: 60vh;
+  }
+  .contact .slider_btn button {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+  .to_top {
+    left: 90%;
+  }
+  .to_top a button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .body header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+  }
+  .body header .logo_btn {
+    width: 20dvw;
+  }
+  .body header .logo_btn .icon {
+    display: none;
+  }
+  .body header nav {
+    display: block;
+    width: 40dvw;
+    margin: 0;
+  }
+  .body header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .body header nav ul li {
+    width: 7dvw;
+    height: 4dvh;
+  }
+  .body header nav ul li a {
+    font-size: 1rem;
+  }
+  .body .content_container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10rem;
+  }
+  .body .content_container .content {
+    margin: 0;
+  }
+  .body .content_container .content p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    line-height: 1.4em;
+    letter-spacing: 0.1em;
+  }
+  .body .content_container .content .countdown {
+    margin-top: 1rem;
+  }
+  .body .content_container .content .countdown .dead-line {
+    width: 5rem;
+    height: 5rem;
+    font-size: 0.8rem;
+  }
+  .body .content_container .content .countdown .dead-line h4 {
+    font-size: 1.7rem;
+  }
+  .about .article_container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 10rem;
+  }
+  .about .article_container .about1 {
+    margin: 0;
+  }
+  .about .article_container .about1 .about_container {
+    min-height: 34vh;
+  }
+  .about .article_container .about1 .about_container .content p {
+    font-size: 1rem;
+  }
+  .service .service_btn {
+    width: 50%;
+    margin: 2rem auto;
+  }
+  .service .service_btn .s_btn {
+    font-size: 1.1rem;
+  }
+  .service .service_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact .slider-container {
+    height: 75vh;
+    margin-top: 1rem;
+  }
+  .contact .slider_btn {
+    margin-top: 2rem;
+  }
+  .contact .slider_btn button {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+}/*# sourceMappingURL=style.css.map */

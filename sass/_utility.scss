@@ -1,0 +1,71 @@
+// display flex 
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// display grid 
+@mixin grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+// icon 
+@mixin icon_font{
+    font-size: 1.5rem;
+}
+
+// mobile screen
+@mixin p_mobile {
+    font-size: .8rem;
+    font-weight: 400;
+    font-family: sans-serif;
+    line-height: 1.5em;
+    letter-spacing: .1em;
+}
+@mixin p_mobile2 {
+    font-size: .9rem;
+}
+@mixin h_mobile {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: secondary_font;
+    line-height: 2em;
+    letter-spacing: .1em;
+    text-transform: capitalize;
+}
+@mixin h3_mobile {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: secondary_font;
+    line-height: 1em;
+    letter-spacing: .1em;
+    color: rgb(65, 149, 177);
+}
+@mixin h4_mobile {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    line-height: 1.2em;
+    letter-spacing: .2em;
+    text-transform: capitalize;
+}
+@mixin h_mobile2{
+    font-size: 1.5rem;
+}
+// desktop screen 
+@mixin p_desktop {
+    font-size: 1rem;
+    font-family: sans-serif;
+    line-height: 1.4em;
+    letter-spacing: .1em;
+}
+@mixin h_desktop {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    letter-spacing: .1em;
+}
