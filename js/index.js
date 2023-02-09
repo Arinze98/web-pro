@@ -183,6 +183,7 @@ about1.addEventListener('click', function(ab) {
 const menu = [
     {
       id: 1,
+      fade: "zoom-in",
       title: "buttermilk pancakes",
       category: "breakfast",
       price: 15.99,
@@ -191,6 +192,7 @@ const menu = [
     },
     {
       id: 2,
+      fade: "zoom-in",
       title: "diner double",
       category: "lunch",
       price: 13.99,
@@ -199,6 +201,7 @@ const menu = [
     },
     {
       id: 3,
+      fade: "zoom-in",
       title: "godzilla milkshake",
       category: "shakes",
       price: 6.99,
@@ -207,6 +210,7 @@ const menu = [
     },
     {
       id: 4,
+      fade: "zoom-in",
       title: "country delight",
       category: "breakfast",
       price: 20.99,
@@ -215,6 +219,7 @@ const menu = [
     },
     {
       id: 5,
+      fade: "zoom-in",
       title: "egg attack",
       category: "lunch",
       price: 22.99,
@@ -223,6 +228,7 @@ const menu = [
     },
     {
       id: 6,
+      fade: "zoom-in",
       title: "oreo dream",
       category: "shakes",
       price: 18.99,
@@ -231,6 +237,7 @@ const menu = [
     },
     {
       id: 7,
+      fade: "zoom-in",
       title: "bacon overflow",
       category: "breakfast",
       price: 8.99,
@@ -239,6 +246,7 @@ const menu = [
     },
     {
       id: 8,
+      fade: "zoom-in",
       title: "american classic",
       category: "lunch",
       price: 12.99,
@@ -247,6 +255,7 @@ const menu = [
     },
     {
       id: 9,
+      fade: "zoom-in",
       title: "quarantine buddy",
       category: "shakes",
       price: 16.99,
@@ -266,7 +275,7 @@ const menu = [
     let contentLoad = contents.map(function(item) {
 
         return `
-            <div class="container">
+            <div class="container" data-aos="${item.fade}">
                 <!-- image container  -->
                 <div class="image">
                     <img src="${item.img}" alt="${item.title}">

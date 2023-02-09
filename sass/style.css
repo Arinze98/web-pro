@@ -19,14 +19,12 @@ html {
 .body {
   width: 100dvw;
   min-height: 100dvh;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   background-color: rgb(241, 241, 241);
 }
 .body header {
   width: 100dvw;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   padding: 1rem;
@@ -51,7 +49,6 @@ html {
   cursor: pointer;
 }
 .body header nav {
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   margin-top: 1rem;
@@ -63,7 +60,11 @@ html {
   display: grid;
   gap: 0.2rem;
 }
-.body header nav ul li {
+.body header nav ul a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.body header nav ul a li {
   height: 5dvh;
   display: flex;
   justify-content: center;
@@ -72,9 +73,6 @@ html {
   border: 1px solid sandybrown;
   border-radius: 0.8rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.body header nav ul li a {
-  text-decoration: none;
   color: sandybrown;
   font-size: 0.8rem;
   font-weight: 400;
@@ -84,7 +82,7 @@ html {
   text-transform: capitalize;
   color: black;
 }
-.body header nav ul li:hover {
+.body header nav ul a li:hover {
   color: white;
   background-color: rgb(216, 178, 145);
 }
@@ -176,7 +174,6 @@ html {
 .page {
   width: 100dvw;
   min-height: 100dvh;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -218,8 +215,7 @@ footer p {
   top: 90%;
   left: 83%;
   visibility: hidden;
-  -webkit-animation: bounce 2s ease-in-out infinite;
-          animation: bounce 2s ease-in-out infinite;
+  animation: bounce 2s ease-in-out infinite;
 }
 .to_top a button {
   width: 40px;
@@ -233,18 +229,6 @@ footer p {
   left: 80%;
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-
-@-webkit-keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 @keyframes bounce {
@@ -302,6 +286,7 @@ footer p {
   font-family: Arial, Helvetica, sans-serif;
   border: none;
   background-color: sandybrown;
+  text-decoration: none;
 }
 .about .article_container .about1 .button_container button:hover {
   background-color: rgb(216, 178, 145);
@@ -310,7 +295,6 @@ footer p {
   background-color: rgb(241, 241, 241);
 }
 .about .article_container .about1 .about_container {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -354,7 +338,6 @@ footer p {
   margin-top: 1rem;
 }
 .service .service_btn .s_btn {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.5rem 1rem;
@@ -387,7 +370,7 @@ footer p {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 170px;
+  height: 220px;
   border: 3px solid sandybrown;
   border-radius: 0.8rem;
 }
@@ -452,7 +435,6 @@ footer p {
      object-fit: cover;
 }
 .contact .slider_btn {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
@@ -485,7 +467,7 @@ footer p {
   .body header .logo_btn .icon .fa-bars {
     font-size: 2rem;
   }
-  .body header nav ul li a {
+  .body header nav ul a li {
     font-size: 0.9rem;
   }
   .body .content_container .content h3 {
@@ -507,7 +489,6 @@ footer p {
   }
   .page {
     min-height: 100vh;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -586,11 +567,9 @@ footer p {
     align-items: center;
     justify-content: space-evenly;
   }
-  .body header nav ul li {
+  .body header nav ul a li {
     width: 7dvw;
     height: 4dvh;
-  }
-  .body header nav ul li a {
     font-size: 1rem;
   }
   .body .content_container {
@@ -637,7 +616,7 @@ footer p {
     min-height: 34vh;
   }
   .about .article_container .about1 .about_container .content p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .service .service_btn {
     width: 50%;
