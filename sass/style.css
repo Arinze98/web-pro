@@ -286,6 +286,7 @@ footer p {
   font-family: Arial, Helvetica, sans-serif;
   border: none;
   background-color: sandybrown;
+  color: black;
   text-decoration: none;
 }
 .about .article_container .about1 .button_container button:hover {
